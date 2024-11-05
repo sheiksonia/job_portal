@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+    <title>Hello, world!</title>
+<style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 70%;
+      }
+      
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      
+      
+</style>
+  </head>
+  <body>
+    <div class="container" >
+      <h1>This job page</h1>
+
+      {% for i in applyJob %}
+
+      <div class="card" >
+        <img src="/{{i.Apply_Image}}" alt="Avatar" style="width:20%">
+        <div class="container">
+          <h4><b>Cover:{{i.Cover}}</b></h4> 
+          <p>skills : {{i.Skills}}</p> 
+          
+        </div>
+      </div>
+
+      {% endfor %} 
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+  
+  </body>
+</html>

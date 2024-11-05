@@ -1,0 +1,15 @@
+
+<ul>
+    {% if user.user_type == 'seeker' %}
+        <li><a href="{% url 'jobFeed' %}">Jobfeed</a></li>
+        <li><a href="{% url 'skillMaching' %}">skill Maching page</a></li>
+        
+    {% elif user.user_type == 'recruiter' %}
+        <li><a href="{% url 'homePage' %}">Home</a></li>
+        
+    {% endif %}
+    <li style="float:right"><a class="active" href=" {% url 'logoutPage' %} ">Log out</a></li>
+    <li style="float:right"><a class="active" href="{% url 'profilePage' %}">Profile</a></li>
+    
+</ul>
+  
